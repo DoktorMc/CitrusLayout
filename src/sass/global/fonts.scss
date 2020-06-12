@@ -1,0 +1,40 @@
+@font-face {
+  font-family: 'FuturaBookC';
+  src: url('../../../build/fonts/FuturaBookC.woff2') format('woff2'),
+      url('../../../build/fonts/FuturaBookC.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../../../build/fonts/Roboto-Regular.woff2') format('woff2'),
+      url('../../../build/fonts/Roboto-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FuturaDemiC';
+  src: url('../../../build/fonts/FuturaDemiC.woff2') format('woff2'),
+      url('../../../build/fonts/FuturaDemiC.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Futura Bk BT';
+  src: url('../../../build/fonts/FuturaBT-Book.woff2') format('woff2'),
+      url('../../../build/fonts/FuturaBT-Book.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FuturaBold';
+  src: url('../../../build/fonts/Futura-Bold.woff2') format('woff2'),
+      url('../../../build/fonts/Futura-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}

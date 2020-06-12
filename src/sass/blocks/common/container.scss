@@ -1,0 +1,23 @@
+.container{
+  position: relative;
+  display: block;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: $mobile-pads;
+  padding-right: $mobile-pads;
+
+  @include tablet {
+    max-width: 100%;
+    padding-left: $tablet-pads;
+    padding-right: $tablet-pads;
+  }
+
+  @include desktop {
+    max-width: 1440px;
+    padding-left: $desktop-pads;
+    padding-right: $desktop-pads;
+  }
+}
+
+
