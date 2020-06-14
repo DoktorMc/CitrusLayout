@@ -1,11 +1,18 @@
-.bonus {  
-  background: url("/build/img/raster/bg.png") bottom no-repeat; 
-  background-size: cover; 
-  padding: 80px 0;
+.d {
+  width: 320px;
+  height: 62.57px;
+  background: url("/build/img/raster/Intersect.png") bottom no-repeat;
+  background-size: contain;
+}
+.bonus {
+  background: #F3F7FB url("/build/img/raster/Intersect2.png") bottom no-repeat;
+  background-size: contain;
+  padding: 30px 0 60px 0;
   .bonus-info {
     text-align: center;
     .bonus-info_title {
       font-family: $roboto;
+      font-weight: normal;
       font-size: 24px;
       line-height: 130%;
       color: $actual-black-text;
@@ -13,7 +20,7 @@
         color: $actual-orange;
       }
     }
-    .bonus-info_description{
+    .bonus-info_description {
       margin-top: 8px;
       font-family: $roboto;
       font-weight: 500;
