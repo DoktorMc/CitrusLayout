@@ -16,16 +16,9 @@
 
 // common
 @import "blocks/common/container";
-@import "blocks/common/call_btn";
-@import "blocks/common/menu";
-@import "blocks/common/arrows";
+
 
 // index page
 @import "blocks/index/header";
-@import "blocks/index/baner";
-@import "blocks/index/stat";
-@import "blocks/index/advantages";
-@import "blocks/index/carclass";
-@import "blocks/index/orderby";
-@import "blocks/index/services";
-
+@import "blocks/index/gifts"; 
+@import "blocks/index/bonus"

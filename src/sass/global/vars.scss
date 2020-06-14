@@ -1,18 +1,10 @@
 // Main Colors
-$yellow: #FECA40;
-$light-yellow: #FFD976;
-$very-light-yellow: #FFE294;
+$actual-gray: #0000008a;
+$actual-black-text: #000000de;
 $black: #000000;
-$white: #FFFFFF;
-$gray: #F9F9F9;
-$light-gray: #FBFBFB;
-$very-light-gray: #E5E5E5;
+$actual-orange:  #FF680A;
 
 // Fonts
-$futuraBookC: "FuturaBookC";
-$futuraBkBT: "Futura Bk BT";
-$futuraDemiC: "FuturaDemiC";
-$futuraBold: "FuturaBold";
 $roboto: "Roboto";
 $arial: "Arial", sans-serif; 
 
@@ -22,11 +14,9 @@ $retina-dppx: 1.5dppx;
 
 // Viewports
 $mobile-width: 320px;
-$mdmobile-width: 420px;
-$bgmobile-width: 480px;
 $tablet-width: 768px;
 $laptop-width: 1024px;
-$desktop-width: 1300px;
+$desktop-width: 1366px;
 
 // Gutters
 $mobile-pads: 20px;

@@ -1,0 +1,15 @@
+.header-baner {
+
+  .header-baner_img {
+    width: 100%;
+
+    @include tablet {
+    }
+
+    @include laptop {
+    }
+
+    @include desktop {
+    }
+  }
+}
