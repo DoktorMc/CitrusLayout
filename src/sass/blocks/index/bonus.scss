@@ -4,22 +4,27 @@
   background: url("/build/img/raster/Intersect.png") bottom no-repeat;
   background-size: contain;
 }
+
 .bonus {
   background: #F3F7FB url("/build/img/raster/Intersect2.png") bottom no-repeat;
   background-size: contain;
   padding: 30px 0 60px 0;
+
   .bonus-info {
     text-align: center;
+
     .bonus-info_title {
       font-family: $roboto;
       font-weight: normal;
       font-size: 24px;
       line-height: 130%;
       color: $actual-black-text;
+
       span {
         color: $actual-orange;
       }
     }
+
     .bonus-info_description {
       margin-top: 8px;
       font-family: $roboto;
@@ -29,12 +34,14 @@
       color: $actual-black-text;
     }
   }
+
   .bonus-form {
     margin: 32px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     .bonus-form_telnumber {
       width: 256px;
       height: 36px;
@@ -42,7 +49,13 @@
       border: 1px solid #cfcfcf;
       box-sizing: border-box;
       border-radius: 50px;
+      text-align: center;
+      font-family: Roboto;
+      font-size: 16px;
+      line-height: 19px;
+      color: $actual-gray;
     }
+
     .bonus-form_button {
       margin-top: 24px;
       width: 256px;

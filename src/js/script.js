@@ -44,5 +44,8 @@ function slider() {
     .eq(0)
     .addClass("header_page_slider-container_item__wraper_active");
 }
-
 slider();
+
+jQuery(function($){
+  $("#mobile").mask("+38(099) 999-99-99",{placeholder:"_"});
+});
