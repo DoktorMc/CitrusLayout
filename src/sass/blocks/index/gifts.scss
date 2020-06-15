@@ -1,13 +1,20 @@
 .group {
-  background: url("/build/img/raster/2_bg.png") bottom no-repeat;
-  background-size: contain;
+  margin-bottom: 24px;
+  @include tablet {
+    background: url("/build/img/raster/2_bg.png") bottom no-repeat;
+    background-size: contain;
+  }
 
+  @include laptop {
+  }
+
+  @include desktop {
+  }
 }
 
 .gifts-bonus {
-  padding-bottom: 73.3px;
   .gifts-bonus-title {
-    margin: 17px 0;
+    margin-top: 17px;
     font-family: $roboto;
     font-style: normal;
     font-weight: normal;
@@ -18,6 +25,7 @@
   }
 
   .gifts-bonus-box {
+    margin-top: 17px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -25,19 +33,22 @@
 
     @include tablet {
       flex-direction: row;
-      justify-content: space-around;
       margin-top: 8px;
     }
 
-    @include laptop {}
+    @include laptop {
+    }
 
-    @include desktop {}
+    @include desktop {
+    }
   }
 
   .gifts-bonus-box_item {
     display: inline-block;
     text-align: center;
     margin-bottom: 24px;
+    width: 208px;
+    height: 221px;
     color: $black;
 
     &:last-child {
@@ -46,11 +57,17 @@
 
     @include tablet {
       margin-bottom: 0;
+      margin-left: 24px;
+      &:last-child {
+        margin-right: 24px;
+      }
     }
 
-    @include laptop {}
+    @include laptop {
+    }
 
-    @include desktop {}
+    @include desktop {
+    }
 
     &:hover,
     &:active {
@@ -72,8 +89,24 @@
 }
 
 .gifts-zone {
+  background: url("/build/img/raster/2_bg.png") top no-repeat;
+  background-size: contain;
+  padding-top: 100px;
+  text-align: center;
+  @include tablet {
+    background: url("/build/img/raster/2_bg.png") bottom no-repeat;
+    background-size: cover;
+    // margin-top: 58px;
+  }
 
+  @include laptop {
+  }
+
+  @include desktop {
+  }
   .gifts-zone-title {
+    display: inline-block;
+    width: 269px;
     font-family: $roboto;
     font-style: normal;
     font-weight: normal;
@@ -91,24 +124,35 @@
 
     @include tablet {
       flex-direction: row;
-      justify-content: space-around;
-      padding-top: 8px;
+      margin-top: -20px;
     }
 
-    @include laptop {}
+    @include laptop {
+    }
 
-    @include desktop {}
+    @include desktop {
+    }
 
     .gifts-zone_box_item {
       width: 208px;
-
       display: inline-block;
       text-align: center;
-
       display: flex;
       flex-direction: column;
       align-items: center;
 
+      @include tablet {
+        margin-left: 24px;
+        &:last-child {
+          margin-right: 24px;
+        }
+      }
+
+      @include laptop {
+      }
+
+      @include desktop {
+      }
       &:hover {
         .gifts-zone_box_item-cloud {
           transform: scale(1.2);
@@ -120,7 +164,7 @@
         height: 89.21px;
         position: relative;
         z-index: 0;
-        top: 55px;
+        top: 50px;
       }
 
       .gifts-zone_box_item-img {
