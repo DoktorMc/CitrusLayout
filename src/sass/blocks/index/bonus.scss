@@ -1,7 +1,20 @@
 .bonus {
-  background: url("/build/img/raster/bg.png") bottom no-repeat;
+  background: url("/build/img/raster/bgMobile.png") bottom no-repeat;
   background-size: cover;
-  padding: 80px 0 60px 0; 
+  padding: 80px 0 60px 0;
+
+  @include tablet {
+    background: url("/build/img/raster/bgPad.png") bottom no-repeat;
+    background-size: cover;
+  }
+
+  @include laptop {
+    padding: 145px 0 60px 0;
+  }
+
+  @include desktop {
+   
+  }
 
   .bonus-info {
     text-align: center;
@@ -16,6 +29,22 @@
       span {
         color: $actual-orange;
       }
+
+      @include tablet {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 32px;
+
+      }
+
+      @include laptop {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 44px;
+        line-height: 130%;
+      }
+
+      @include desktop {}
     }
 
     .bonus-info_description {
@@ -25,11 +54,23 @@
       font-size: 14px;
       line-height: 130%;
       color: $actual-black-text;
+
+      @include tablet {
+        margin-top: 0;
+        font-size: 16px;
+      }
+
+      @include laptop {
+        font-size: 22px;
+        line-height: 130%;
+      }
+
+      @include desktop {}
     }
   }
 
   .bonus-form {
-    margin: 32px;
+    margin: 32px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -55,10 +96,11 @@
       }
 
       @include laptop {
+        width: 369px;
+        height: 56px;
       }
 
-      @include desktop {
-      }
+      @include desktop {}
     }
 
     .bonus-form_button {
@@ -84,10 +126,11 @@
       }
 
       @include laptop {
+        width: 369px;
+        height: 56px;
       }
 
-      @include desktop {
-      }
+      @include desktop {}
     }
   }
 }

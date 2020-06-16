@@ -1,14 +1,23 @@
 .group {
+  background: url("/build/img/raster/2_bg.png") bottom no-repeat;
+  background-size: contain;
+  background-position: 50% 55%;
   margin-bottom: 24px;
+
+
   @include tablet {
-    background: url("/build/img/raster/2_bg.png") bottom no-repeat;
+    background-position: 50% 95%;
     background-size: contain;
   }
 
   @include laptop {
+    background-position: 50% 115%;
+    background-size: contain;
   }
 
   @include desktop {
+    background-position: 50% 115%;
+    background-size: cover;
   }
 }
 
@@ -22,6 +31,13 @@
     line-height: 23px;
     text-align: center;
     color: $actual-gray;
+
+
+    @include desktop {
+      margin-top: 34px;
+      font-size: 28px;
+      line-height: 33px;
+    }
   }
 
   .gifts-bonus-box {
@@ -37,18 +53,19 @@
     }
 
     @include laptop {
+      margin-top: 21px;
     }
 
-    @include desktop {
-    }
+    @include desktop {}
   }
 
   .gifts-bonus-box_item {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
     margin-bottom: 24px;
     width: 208px;
-    height: 221px;
     color: $black;
 
     &:last-child {
@@ -58,54 +75,70 @@
     @include tablet {
       margin-bottom: 0;
       margin-left: 24px;
+
       &:last-child {
         margin-right: 24px;
       }
     }
 
     @include laptop {
+      width: 294px;
     }
 
     @include desktop {
-    }
-
-    &:hover,
-    &:active {
-      color: $actual-orange;
+      width: 389px;
     }
 
     .gifts-bonus-box_item-img {
       width: 160.21px;
       height: 160.21px;
       margin-bottom: 13.49px;
+
+      @include desktop {
+        width: 190px;
+        height: 190px;
+      }
     }
 
     .gifts-bonus-box_item-description {
       font-family: $roboto;
       font-size: 14px;
       line-height: 16px;
+
+      @include laptop {
+        font-size: 16px;
+        line-height: 19px;
+        color: #3B6D9A;
+      }
+
+      @include desktop {
+        font-size: 18px;
+        line-height: 21px;
+      }
+    }
+
+    &:hover {
+      .gifts-bonus-box_item-description {
+        color: $actual-orange;
+      }
     }
   }
 }
 
 .gifts-zone {
-  background: url("/build/img/raster/2_bg.png") top no-repeat;
-  background-size: contain;
-  padding-top: 100px;
-  text-align: center;
+  margin-top: 100px;
+
   @include tablet {
-    background: url("/build/img/raster/2_bg.png") bottom no-repeat;
-    background-size: cover;
-    // margin-top: 58px;
+    margin-top: 58px;
   }
 
   @include laptop {
+    margin-top: 100px;
   }
 
-  @include desktop {
-  }
+  @include desktop {}
+
   .gifts-zone-title {
-    display: inline-block;
     width: 269px;
     font-family: $roboto;
     font-style: normal;
@@ -114,6 +147,18 @@
     line-height: 23px;
     text-align: center;
     color: $actual-gray;
+
+    @include tablet {
+      width: auto;
+    }
+
+    @include laptop {}
+
+    @include desktop {
+      font-size: 28px;
+      line-height: 33px;
+    }
+
   }
 
   .gifts-zone_box {
@@ -128,9 +173,11 @@
     }
 
     @include laptop {
+      margin-top: 8px;
     }
 
     @include desktop {
+
     }
 
     .gifts-zone_box_item {
@@ -143,16 +190,18 @@
 
       @include tablet {
         margin-left: 24px;
+
         &:last-child {
           margin-right: 24px;
         }
       }
 
       @include laptop {
+        width: 293px;
       }
 
-      @include desktop {
-      }
+      @include desktop {}
+
       &:hover {
         .gifts-zone_box_item-cloud {
           transform: scale(1.2);
