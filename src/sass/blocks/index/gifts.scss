@@ -3,21 +3,22 @@
   background-size: contain;
   background-position: 50% 55%;
   margin-bottom: 24px;
+  
 
 
   @include tablet {
     background-position: 50% 95%;
-    background-size: contain;
+    // background-size: contain;
   }
 
   @include laptop {
     background-position: 50% 115%;
-    background-size: contain;
+    // background-size: contain;
   }
 
   @include desktop {
-    background-position: 50% 115%;
-    background-size: cover;
+    background-position: 50% 780%; 
+   
   }
 }
 
@@ -127,6 +128,7 @@
 
 .gifts-zone {
   margin-top: 100px;
+  text-align: center;
 
   @include tablet {
     margin-top: 58px;
@@ -139,7 +141,8 @@
   @include desktop {}
 
   .gifts-zone-title {
-    width: 269px;
+    width: auto;
+    padding: 0 24px;
     font-family: $roboto;
     font-style: normal;
     font-weight: normal;
@@ -149,7 +152,7 @@
     color: $actual-gray;
 
     @include tablet {
-      width: auto;
+      
     }
 
     @include laptop {}
@@ -230,4 +233,4 @@
       }
     }
   }
-}
+} 

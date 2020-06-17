@@ -76,18 +76,32 @@
       <!--***********************************************-->
     </section>
 
-
-    <section class="bonus">
-      <div class="bonus-info">
-        <h1 class="bonus-info_title">Получи <span>500 бонусов</span></h1>
-        <p class="bonus-info_description">на покупки в нашем новом магазине <br>“Цитрус” в Днепре!</p>
+    <section class="bottom">
+      <div class="bottom_bonus  hidden">
+        <div class="bottom_bonus-info">
+          <h1 class="bottom_bonus-info_title">Получи <span>500 бонусов</span></h1>
+          <p class="bottom_bonus-info_description">на покупки в нашем новом магазине <br>“Цитрус” в Днепре!</p>
+        </div>
+        <form action="https://postman-echo.com/post" class="bottom_bonus-form" method="post">
+          <input type="tel" name="phoneNumber" required id="mobile" class="bottom_bonus-form_telnumber"
+            placeholder="+38(0__) ___-__-__">
+          <input type="submit" value="Отримати" class="bottom_bonus-form_button">
+        </form>
       </div>
-      <form action="https://postman-echo.com/post" class="bonus-form">
-        <input type="tel" name="number" id="mobile" class="bonus-form_telnumber" placeholder="+38(0__) ___-__-__">
-        <input type="submit" value="Отримати" class="bonus-form_button">
-      </form>
+
+      <div class="bottom_thnks">
+        <h1 class="bottom_thnks-title">Отлично!</h1>
+        <h2 class="bottom_thnks-info">Бонусы будут начислены в ближайшее время! <br>
+          Ждем вас в нашем новом магазине на<br>
+          пр. Д. Яворницкого, 58 в Днепре</h2>
+        <p class="bottom_thnks-offer">Поделитесь страничкой с друзьями,<br>
+          пускай они также получат порцию яркого настроения!</p>
+        <a href="#" class="bottom_thnks-button">назад</a>
+      </div>
     </section>
   </div>
+
+
 
 
   <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>

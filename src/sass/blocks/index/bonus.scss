@@ -1,136 +1,263 @@
-.bonus {
-  background: url("/build/img/raster/bgMobile.png") bottom no-repeat;
+.bottom {
+  background: url("/build/img/raster/bgMobile.png") top no-repeat;
   background-size: cover;
-  padding: 80px 0 60px 0;
+  height: 372px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  // padding-top: 80px;
 
   @include tablet {
     background: url("/build/img/raster/bgPad.png") bottom no-repeat;
     background-size: cover;
+    padding-top: 40px;
+    height: 388px;
   }
 
   @include laptop {
-    padding: 145px 0 60px 0;
+    height: 515px;
   }
 
   @include desktop {
-   
+    background: url("/build/img/raster/bgD.png") bottom no-repeat;
+    background-size: cover;
+    height: 619px;
   }
 
-  .bonus-info {
-    text-align: center;
-
-    .bonus-info_title {
-      font-family: $roboto;
-      font-weight: normal;
-      font-size: 24px;
-      line-height: 130%;
-      color: $actual-black-text;
-
-      span {
-        color: $actual-orange;
-      }
-
-      @include tablet {
-        font-style: normal;
-        font-weight: normal;
-        font-size: 32px;
-
-      }
-
-      @include laptop {
-        font-style: normal;
-        font-weight: normal;
-        font-size: 44px;
-        line-height: 130%;
-      }
-
-      @include desktop {}
-    }
-
-    .bonus-info_description {
-      margin-top: 8px;
-      font-family: $roboto;
-      font-weight: 500;
-      font-size: 14px;
-      line-height: 130%;
-      color: $actual-black-text;
-
-      @include tablet {
-        margin-top: 0;
-        font-size: 16px;
-      }
-
-      @include laptop {
-        font-size: 22px;
-        line-height: 130%;
-      }
-
-      @include desktop {}
-    }
-  }
-
-  .bonus-form {
-    margin: 32px 0;
+  .bottom_bonus {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    .bonus-form_telnumber {
-      width: 256px;
-      height: 36px;
-      background: #ffffff;
-      border: 1px solid #cfcfcf;
-      box-sizing: border-box;
-      border-radius: 50px;
+    .bottom_bonus-info {
       text-align: center;
-      font-family: Roboto;
-      font-size: 16px;
-      line-height: 19px;
-      color: $actual-gray;
+
+      .bottom_bonus-info_title {
+        font-family: $roboto;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 130%;
+        color: $actual-black-text;
+
+        span {
+          color: $actual-orange;
+        }
+
+        @include tablet {
+          font-style: normal;
+          font-weight: normal;
+          font-size: 32px;
+        }
+
+        @include laptop {
+          font-style: normal;
+          font-weight: normal;
+          font-size: 44px;
+          line-height: 130%;
+        }
+
+        @include desktop {
+          font-style: normal;
+          font-weight: normal;
+          font-size: 62px;
+          line-height: 130%;
+        }
+      }
+
+      .bottom_bonus-info_description {
+        margin-top: 8px;
+        font-family: $roboto;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 130%;
+        color: $actual-black-text;
+
+        @include tablet {
+          margin-top: 0;
+          font-size: 16px;
+        }
+
+        @include laptop {
+          font-style: normal;
+          font-weight: normal;
+          font-size: 22px;
+          line-height: 130%;
+        }
+
+        @include desktop {
+          font-size: 32px;
+          line-height: 130%;
+        }
+      }
+    }
+
+    .bottom_bonus-form {
+      margin: 32px 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      input {
+        &:focus {
+          outline: none;
+        }
+      }
+      .bottom_bonus-form_telnumber {
+        width: 256px;
+        height: 36px;
+        background: #ffffff;
+        border: 1px solid #cfcfcf;
+        box-sizing: border-box;
+        border-radius: 50px;
+        text-align: center;
+        font-family: Roboto;
+        font-size: 16px;
+        line-height: 19px;
+        color: $actual-gray;
+
+        @include tablet {
+          height: 46px;
+          font-size: 18px;
+          line-height: 21px;
+        }
+
+        @include laptop {
+          width: 369px;
+          height: 56px;
+        }
+
+        @include desktop {
+          width: 369px;
+          height: 56px;
+        }
+      }
+
+      .bottom_bonus-form_button {
+        margin-top: 24px;
+        width: 256px;
+        height: 36px;
+        border: none;
+        background: #ff680a;
+        border-radius: 50px;
+        font-family: $roboto;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #ffffffde;
+
+        @include tablet {
+          height: 46px;
+          font-size: 18px;
+          line-height: 21px;
+        }
+
+        @include laptop {
+          width: 369px;
+          height: 56px;
+        }
+
+        @include desktop {
+        }
+      }
+    }
+  }
+
+  .bottom_thnks {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .bottom_thnks-title {
+      font-family: $roboto;
+      font-size: 28px;
+      line-height: 130%;
+      color: $actual-orange;
 
       @include tablet {
-        height: 46px;
-        font-size: 18px;
-        line-height: 21px;
+        font-size: 38px;
+        line-height: 130%;
       }
 
       @include laptop {
-        width: 369px;
-        height: 56px;
+        font-weight: 500;
+        font-size: 50px;
+        line-height: 130%;
       }
 
-      @include desktop {}
+      @include desktop {
+      }
     }
-
-    .bonus-form_button {
-      margin-top: 24px;
-      width: 256px;
-      height: 36px;
-      border: none;
-      background: #ff680a;
-      border-radius: 50px;
+    .bottom_thnks-info {
+      // width: 300px;
       font-family: $roboto;
       font-style: normal;
-      font-weight: 500;
-      font-size: 16px;
-      line-height: 19px;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 130%;
       text-align: center;
-      text-transform: uppercase;
-      color: #ffffffde;
+      color: $actual-black-text;
 
       @include tablet {
-        height: 46px;
         font-size: 18px;
-        line-height: 21px;
+        line-height: 130%;
       }
 
       @include laptop {
-        width: 369px;
-        height: 56px;
+        font-size: 25px;
+        line-height: 130%;
       }
 
-      @include desktop {}
+      @include desktop {
+      }
     }
+    .bottom_thnks-offer {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 10px;
+      line-height: 130%;
+      text-align: center;
+      color: $actual-black-text;
+
+      @include tablet {
+        font-size: 16px;
+        line-height: 130%;
+      }
+
+      @include laptop {
+        font-size: 18px;
+        line-height: 130%;
+      }
+
+      @include desktop {
+      }
+    }
+    .bottom_thnks-button {
+      margin-top: 35px;
+      width: 160px;
+      height: 56px;
+      background: $actual-orange;
+      font-family: $roboto;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 28px;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50px;
+      color: #ffffff;
+      transition: 0.5s;
+      &:hover {
+        background: $actual-orange-hover;
+      }
+    }
+  }
+  .hidden {
+    display: none;
   }
 }
