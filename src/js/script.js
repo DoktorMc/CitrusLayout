@@ -1,51 +1,48 @@
-function slider() {
-  let slider = $(".header_page_slider-container");
-  let sliderItems = slider.children();
-  let sliderThumbs = $(".header_page_slider-thumbs");
 
-  sliderThumbs
-    .on('click', '.header_page_slider-thumbs_item', function (e) {
-      let t = $(this);
-      let active = slider.find('.header_page_slider-container_item__wraper_active');
-      let current = active.index();
-      let next = current;
-      
-      console.log(t);
-      next = t.index();
-      
 
-      if (current == next) {
-        return;
-      }
+/* прикрепить событие submit к форме */
+$( document ).ready(function() {
+  let bonus = $(".bottom_bonus");
+  let thnks = $(".thnks_wrap");
 
-        
-      
-      active.removeClass("header_page_slider-container_item__wraper_active");
-
-      sliderThumbs
-        .find('.header_page_slider-thumbs_item__active')
-        .removeClass('header_page_slider-thumbs_item__active');
-      sliderItems  
-        .eq(next)
-        .addClass("header_page_slider-container_item__wraper_active");
-      sliderThumbs
-        .find('.header_page_slider-thumbs_item')  
-        .eq(next)
-        .addClass("header_page_slider-thumbs_item__active");
-
-    });
-
-  sliderItems
-    .each(function (i) {
-      if (!i) {
-        sliderThumbs.children().eq(0).addClass("header_page_slider-thumbs_item__active");
-      } 
-    })
-    .eq(0)
-    .addClass("header_page_slider-container_item__wraper_active");
-}
-slider();
+  if (bonus.is(":visible")) {
+    $("#bottom_bonus-form").submit(function(event) {
+  /* отключение стандартной отправки формы */
+  event.preventDefault();  
+  bonus.fadeIn(1000);
+    bonus.hide();
+    
+    thnks.show();
+    
+    
+  });
+  $("#bottom_thnks-button").click(function(event) {
+   if(thnks.css("display")==='block'){
+      event.preventDefault();
+      thnks.hide();
+      bonus.show();
+    }
+   });
+} 
 
 jQuery(function($){
   $("#mobile").mask("+38(099) 999-99-99",{placeholder:"_"});
 });
+});
+
+  
+
+  /* собираем данные с элементов страницы: */
+  // var $form = $( this ),
+  //     term = $form.find( 'input[name="phoneNumber"]' ).val(),
+  //     url = $form.attr( 'action' );
+  
+  // /* отправляем данные методом POST */
+  // var posting = $.post( url, { phoneNumber: term } );
+  
+  /* результат помещаем в div */
+  // posting.done(function( data ) {
+    // var content = $( data ).find( '#content' );
+    // $( "#result" ).empty().append( content );
+  // });
+

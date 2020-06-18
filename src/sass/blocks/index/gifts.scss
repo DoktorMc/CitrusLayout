@@ -3,7 +3,7 @@
   background-size: contain;
   background-position: 50% 55%;
   margin-bottom: 24px;
-  
+
 
 
   @include tablet {
@@ -17,8 +17,8 @@
   }
 
   @include desktop {
-    background-position: 50% 780%; 
-   
+    background-position: 50% 780%;
+
   }
 }
 
@@ -128,7 +128,7 @@
 
 .gifts-zone {
   margin-top: 100px;
-  text-align: center;
+  align-items: center;
 
   @include tablet {
     margin-top: 58px;
@@ -151,9 +151,7 @@
     text-align: center;
     color: $actual-gray;
 
-    @include tablet {
-      
-    }
+    @include tablet {}
 
     @include laptop {}
 
@@ -179,9 +177,7 @@
       margin-top: 8px;
     }
 
-    @include desktop {
-
-    }
+    @include desktop {}
 
     .gifts-zone_box_item {
       width: 208px;
@@ -203,7 +199,9 @@
         width: 293px;
       }
 
-      @include desktop {}
+      @include desktop {
+        width: 389px;
+      }
 
       &:hover {
         .gifts-zone_box_item-cloud {
@@ -217,6 +215,10 @@
         position: relative;
         z-index: 0;
         top: 50px;
+
+        @include desktop {
+          width: 144px;
+        }
       }
 
       .gifts-zone_box_item-img {
@@ -233,4 +235,4 @@
       }
     }
   }
-} 
+}
