@@ -101,11 +101,7 @@
       justify-content: center;
       align-items: center;
 
-      input {
-        &:focus {
-          outline: none;
-        }
-      }
+      
 
       .bottom_bonus-form_telnumber {
         width: 256px;
@@ -152,6 +148,7 @@
         text-align: center;
         text-transform: uppercase;
         color: #ffffffde;
+        transition: .5s;
 
         @include tablet {
           height: 46px;
@@ -165,6 +162,10 @@
         }
 
         @include desktop {}
+
+        &:hover {
+          background: $actual-orange-hover;
+        } 
       }
     }
   }
@@ -257,6 +258,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        border: none;
         border-radius: 50px;
         color: #ffffff;
         transition: 0.5s;
@@ -282,4 +284,9 @@
     }
   }
 
+}
+input, button{
+  &:focus {
+    outline: none;
+  }
 }

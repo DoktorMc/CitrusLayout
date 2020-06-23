@@ -14,7 +14,7 @@ $("#bottom_bonus-form").submit(function (e) {
     type: "POST",
     url: url,
     data: $(form).serialize(),
-    success: function (data) {
+    success: function () {
       showThnks();
     },
     error: function () {
@@ -33,24 +33,17 @@ function showThnks() {
     event.preventDefault();
     bonus.hide();
     thnks.show();
-  };
-  $("#bottom_thnks-button").click(function (event) {
-    if (thnks.css("display") === 'block') {
-      event.preventDefault();
-      thnks.hide();
-      bonus.show();
-      $("#bottom_bonus-form").trigger('reset');
+    $("#bottom_thnks-button").focus();
+  }
+  $(thnks).keydown(function (event) {
+    if (event.which === 13 && thnks.is(":visible")) {
+      $("#bottom_thnks-button").click(function (e) {
+        e.preventDefault();
+        thnks.hide();
+        bonus.show();
+        $("#bottom_bonus-form").trigger('reset');
+      });
+
     }
   });
 }
-
-
-
-
-
-
-
-
-
-
-
